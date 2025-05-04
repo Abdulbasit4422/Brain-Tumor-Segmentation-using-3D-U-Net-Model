@@ -1,15 +1,6 @@
-import subprocess
-import sys
-
-def install(package):
-    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
-
-install('nibabel')
-
-# Rest of your imports
-import nibabel as nib
 import streamlit as st
 import numpy as np
+import nibabel as nib
 from tensorflow.keras.models import load_model
 from sklearn.preprocessing import MinMaxScaler
 import os
@@ -18,7 +9,6 @@ import gdown
 import zipfile
 import tempfile
 from tensorflow.keras.utils import to_categorical
-
 
 # Title of the app
 st.title("Brain Tumor Segmentation using 3D U-Net")
