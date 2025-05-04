@@ -1,15 +1,3 @@
-import streamlit as st
-import numpy as np
-import nibabel as nib
-from tensorflow.keras.models import load_model
-from sklearn.preprocessing import MinMaxScaler
-import os
-import matplotlib.pyplot as plt
-import gdown
-import zipfile
-import tempfile
-from tensorflow.keras.utils import to_categorical
-
 import subprocess
 import sys
 
@@ -20,6 +8,17 @@ install('nibabel')
 
 # Rest of your imports
 import nibabel as nib
+import streamlit as st
+import numpy as np
+from tensorflow.keras.models import load_model
+from sklearn.preprocessing import MinMaxScaler
+import os
+import matplotlib.pyplot as plt
+import gdown
+import zipfile
+import tempfile
+from tensorflow.keras.utils import to_categorical
+
 
 # Title of the app
 st.title("Brain Tumor Segmentation using 3D U-Net")
