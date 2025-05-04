@@ -10,6 +10,17 @@ import zipfile
 import tempfile
 from tensorflow.keras.utils import to_categorical
 
+import subprocess
+import sys
+
+def install(package):
+    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+
+install('nibabel')
+
+# Rest of your imports
+import nibabel as nib
+
 # Title of the app
 st.title("Brain Tumor Segmentation using 3D U-Net")
 
